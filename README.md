@@ -1,7 +1,7 @@
 # pal-tracker
 Platform  Acceleration Lab - Sessions
 
-
+<blockquote>
 cf target -s review
 cf create-service ${MYSQL_SERVICE_NAME} ${PLAN_NAME} tracker-database
 cf target -s production
@@ -26,3 +26,5 @@ fly -t pal-concourse set-pipeline -p pal-tracker --load-vars-from ci/variables.y
 fly -t pal-concourse destroy-pipeline -p pal-tracker
 
 fly -t pal-concourse unpause-pipeline -p pal-tracker
+
+<blockquote>
