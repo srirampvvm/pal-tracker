@@ -66,15 +66,15 @@ jobs:
   - task: migrate database
     file: pal-tracker/ci/migrateDatabase.yml
     params:
-      CF_API_URL: {{cf-api-url}}
-      CF_USERNAME: {{cf-username}}
-      CF_PASSWORD: {{cf-password}}
-      CF_ORG: {{cf-org}}
+      CF_API_URL: https://api.sys.longs.pal.pivotal.io
+      CF_USERNAME: pendyala.murthy@wellsfargo.com
+      CF_PASSWORD: 8dbnysv3
+      CF_ORG: pendyala-murthy
       CF_SPACE: review
-      MYSQL_IP: {{mysql-ip}}
-      DATABASE_NAME: {{review-database-name}}
-      DATABASE_USERNAME: {{review-database-username}}
-      DATABASE_PASSWORD: {{review-database-password}}
+      MYSQL_IP: 192.168.16.98
+      DATABASE_NAME: cf_360b1825_0b79_46cf_8a1a_9231d91a60af
+      DATABASE_USERNAME: pZRgdto1eaNI96xz
+      DATABASE_PASSWORD: t5wbCHrQWfa9CT6c
   - put: review-deployment
     params:
       manifest: pal-tracker/manifest-review.yml
@@ -90,15 +90,15 @@ jobs:
   - task: migrate database
     file: pal-tracker/ci/migrateDatabase.yml
     params:
-      CF_API_URL: {{cf-api-url}}
-      CF_USERNAME: {{cf-username}}
-      CF_PASSWORD: {{cf-password}}
-      CF_ORG: {{cf-org}}
+      CF_API_URL: https://api.sys.longs.pal.pivotal.io
+      CF_USERNAME: pendyala.murthy@wellsfargo.com
+      CF_PASSWORD: 8dbnysv3
+      CF_ORG: pendyala-murthy
       CF_SPACE: production
-      MYSQL_IP: {{mysql-ip}}
-      DATABASE_NAME: {{production-database-name}}
-      DATABASE_USERNAME: {{production-database-username}}
-      DATABASE_PASSWORD: {{production-database-password}}
+      MYSQL_IP: 192.168.16.98
+      DATABASE_NAME: cf_08cf23e4_8916_4823_a903_d87e43ba73a0
+      DATABASE_USERNAME: M60H45yQfyWU6wGx
+      DATABASE_PASSWORD: 3XWVOXtjA5md4iM7
   - put: production-deployment
     params:
       manifest: pal-tracker/manifest-production.yml
